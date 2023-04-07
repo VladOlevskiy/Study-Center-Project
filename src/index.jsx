@@ -9,7 +9,7 @@ import ScrollToTop from './helpers/ScrollToTop';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>
+    <HashRouter basename="/Study-Center-Project">
       <ThemeProvider theme={theme}>
         <ScrollToTop />
         <App />
