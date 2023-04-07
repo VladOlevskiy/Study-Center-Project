@@ -3,8 +3,7 @@ import MainInfoHome from '../../components/MainInfoHome/MainInfoHome';
 import Features from 'components/Features/Features';
 import Reviews from '../../components/Reviews/Reviews';
 import ContactFormSection from 'components/ContactFormSection/ContactFormSection';
-import { AnimatePresence } from 'framer-motion';
-import { motion } from 'framer-motion';
+
 const Home = () => {
   return (
     <>

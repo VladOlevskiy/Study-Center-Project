@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { one } from 'media';
 import { TbHexagonNumber1 } from 'react-icons/tb';
 import { TbHexagonNumber2 } from 'react-icons/tb';
 import { TbHexagonNumber3 } from 'react-icons/tb';

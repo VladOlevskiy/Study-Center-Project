@@ -2,15 +2,12 @@ import {
   Section,
   Title,
   Text,
-  WrapperImg,
   Img,
-  WrapperSwiperSlide,
   PhotoContainer,
 } from './CoursesMedia-styled';
 import { Container } from 'styles/Container-styled';
 
 import { picture, a1, a2, a3, a4, a5, a6 } from 'media';
-import { heroBg_img } from 'media';
 
 // import Swiper styles
 import 'swiper/css';

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import FsLightbox from 'fslightbox-react';
-import { photo_Malesh, photo_Grinchuk } from 'media';
 import { Container } from 'styles/Container-styled';
 import { Section, Title, List, Item, Img } from './WorkersMedia-styled';
 
@@ -11,20 +10,6 @@ const TextAnimationUp = {
   },
   onscreen: {
     y: 0,
-    opacity: 1,
-    transition: { type: 'spring' },
-    bounce: 0.3,
-    duration: 3,
-  },
-};
-
-const TextAnimationRight = {
-  offscreen: {
-    x: 300,
-    opacity: 0,
-  },
-  onscreen: {
-    x: 0,
     opacity: 1,
     transition: { type: 'spring' },
     bounce: 0.3,

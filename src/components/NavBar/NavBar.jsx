@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Container } from '../../styles/Container-styled';
-import { motion, AnimateSharedLayout } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
 import {

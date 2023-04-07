@@ -9,7 +9,7 @@ import { AnimatePresence } from 'framer-motion';
 
 const SharedLayout = () => {
   return (
-    <>
+    <Container>
       <Header />
       <Suspense
         fallback={
@@ -35,7 +35,7 @@ const SharedLayout = () => {
         <Outlet />
       </Suspense>
       <Footer />
-    </>
+    </Container>
   );
 };
 

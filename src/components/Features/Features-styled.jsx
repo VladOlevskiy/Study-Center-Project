@@ -5,7 +5,6 @@ import { HiAcademicCap } from 'react-icons/hi';
 import { GiBlackBook } from 'react-icons/gi';
 import { AiFillSignal } from 'react-icons/ai';
 import { GiNotebook } from 'react-icons/gi';
-import { heroBg_img } from 'media';
 import { img } from 'media';
 import { aaa } from 'media';
 

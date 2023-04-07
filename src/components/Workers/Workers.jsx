@@ -4,7 +4,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import WorkersListMainInfo from './WorkersListMailInfo/WorkersListMainInfo';
 
-import { SectionWithBackground, Section, Title } from './Workers-styled';
+import { SectionWithBackground } from './Workers-styled';
 const Workers = () => {
   const [workersList, setWorkersList] = useState(null);
   const [loading, setLoading] = useState(false);

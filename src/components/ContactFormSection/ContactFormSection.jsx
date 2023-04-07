@@ -16,7 +16,7 @@ import {
   BoxInputMessage,
   Button,
 } from './ContactFormSection-styled';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form } from 'formik';
 
 const TextAnimationContactFormSection = {
   hidden: {

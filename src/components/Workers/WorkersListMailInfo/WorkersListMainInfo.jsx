@@ -1,14 +1,10 @@
 import { Container } from 'styles/Container-styled';
-import Workers from '../Workers';
-import { photo_Malesh, photo_Grinchuk } from 'media';
 // import aa from '../../../../public/ex.jpg';
-import { Variants } from 'framer-motion';
 import { motion } from 'framer-motion';
 
 import {
   Section,
   Title,
-  WrapperMain,
   List,
   Item,
   WrapperTextInfo,

@@ -8,7 +8,6 @@ import CoursesWhyUs from './CoursesWhyUs/CoursesWhyUs';
 
 import {
   SectionOne,
-  SectionTwo,
   Title,
   WrapperList,
   CoursesList,
@@ -31,7 +30,6 @@ import {
 } from './Courses-styled';
 import { Container } from 'styles/Container-styled';
 import { useState } from 'react';
-import { backgroundCourses } from 'media';
 import axios from 'axios';
 import { ThreeDots } from 'react-loader-spinner';
 import { AnimatePresence } from 'framer-motion';
@@ -41,15 +39,15 @@ const Courses = () => {
   const [loading, setLoading] = useState(false);
   const [filterList, setFilterList] = useState(null);
   const [allCourses, setAllCourses] = useState(null);
-  const courses = {
-    Course_1: 1,
-    Course_2: 2,
-    Course_3: 3,
-    Course_4: 4,
-    Course_5: 5,
-    Course_6: 6,
-    Course_7: 7,
-  };
+  // const courses = {
+  //   Course_1: 1,
+  //   Course_2: 2,
+  //   Course_3: 3,
+  //   Course_4: 4,
+  //   Course_5: 5,
+  //   Course_6: 6,
+  //   Course_7: 7,
+  // };
   useEffect(() => {
     async function fetchData() {
       try {

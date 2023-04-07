@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { backgroundCourses } from 'media';
 import { motion } from 'framer-motion';
 import { GiCheckMark } from 'react-icons/gi';
-import { MdTaskAlt } from 'react-icons/gi';
 
 export const Wrapper = styled.div`
   position: relative;
