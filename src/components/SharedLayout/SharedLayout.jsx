@@ -1,7 +1,6 @@
 import Header from '../Header/Header';
 import { Outlet } from 'react-router';
 import { Suspense } from 'react';
-import { Container } from 'styles/Container-styled';
 import { Loader } from './SharedLayout-styled';
 import Footer from 'components/Footer/Footer';
 import { Dna } from 'react-loader-spinner';
@@ -9,7 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 
 const SharedLayout = () => {
   return (
-    <Container>
+    <>
       <Header />
       <Suspense
         fallback={
@@ -35,7 +34,7 @@ const SharedLayout = () => {
         <Outlet />
       </Suspense>
       <Footer />
-    </Container>
+    </>
   );
 };
 

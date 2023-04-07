@@ -79,7 +79,9 @@ const ProductDetails = ({ id }) => {
     async function fetchData() {
       try {
         // setLoading(true);
-        const response = await axios.get('workersData.json');
+        const response = await axios.get(
+          '/Study-Center-Project/workersData.json'
+        );
         const data = response.data;
         const workerData = data.filter(worker => {
           return worker.id === Number(id);
