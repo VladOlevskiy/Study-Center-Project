@@ -7,15 +7,15 @@ import WorkersListMainInfo from './WorkersListMailInfo/WorkersListMainInfo';
 import { SectionWithBackground } from './Workers-styled';
 const Workers = () => {
   const [workersList, setWorkersList] = useState(null);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   useEffect(() => {
     async function fetchData() {
       try {
-        setLoading(true);
+        // setLoading(true);
         const response = await axios.get('workersData.json');
         const data = response.data;
         setWorkersList(data);
-        setLoading(false);
+        // setLoading(false);
       } catch (error) {
         throw new Error(error);
       }

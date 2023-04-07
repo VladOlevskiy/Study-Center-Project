@@ -73,12 +73,12 @@ const TextAnimationLeft = {
 
 const ProductDetails = ({ id }) => {
   const [worker, setWorker] = useState(null);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        setLoading(true);
+        // setLoading(true);
         const response = await axios.get('workersData.json');
         const data = response.data;
         const workerData = data.filter(worker => {
@@ -86,7 +86,7 @@ const ProductDetails = ({ id }) => {
         });
         console.log(workerData);
         setWorker(workerData);
-        setLoading(false);
+        // setLoading(false);
       } catch (error) {
         throw new Error(error);
       }
