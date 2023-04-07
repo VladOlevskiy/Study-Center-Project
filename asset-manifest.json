@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Study-Center-Project/static/css/main.fd7cede9.css",
-    "main.js": "/Study-Center-Project/static/js/main.836aae8f.js",
+    "main.js": "/Study-Center-Project/static/js/main.d8e9b898.js",
     "static/css/7.19233baa.chunk.css": "/Study-Center-Project/static/css/7.19233baa.chunk.css",
     "static/js/7.fb19cda8.chunk.js": "/Study-Center-Project/static/js/7.fb19cda8.chunk.js",
     "static/css/732.a1c80233.chunk.css": "/Study-Center-Project/static/css/732.a1c80233.chunk.css",
@@ -35,7 +35,7 @@
     "static/media/pictureCourse.jpg": "/Study-Center-Project/static/media/pictureCourse.2f2402a9e0fa69e2a071.jpg",
     "index.html": "/Study-Center-Project/index.html",
     "main.fd7cede9.css.map": "/Study-Center-Project/static/css/main.fd7cede9.css.map",
-    "main.836aae8f.js.map": "/Study-Center-Project/static/js/main.836aae8f.js.map",
+    "main.d8e9b898.js.map": "/Study-Center-Project/static/js/main.d8e9b898.js.map",
     "7.19233baa.chunk.css.map": "/Study-Center-Project/static/css/7.19233baa.chunk.css.map",
     "7.fb19cda8.chunk.js.map": "/Study-Center-Project/static/js/7.fb19cda8.chunk.js.map",
     "732.a1c80233.chunk.css.map": "/Study-Center-Project/static/css/732.a1c80233.chunk.css.map",
@@ -54,6 +54,6 @@
   },
   "entrypoints": [
     "static/css/main.fd7cede9.css",
-    "static/js/main.836aae8f.js"
+    "static/js/main.d8e9b898.js"
   ]
 }
