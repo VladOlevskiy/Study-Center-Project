@@ -4,8 +4,9 @@ import { TbHexagonNumber2 } from 'react-icons/tb';
 import { TbHexagonNumber3 } from 'react-icons/tb';
 import { TbHexagonNumber4 } from 'react-icons/tb';
 import { TbHexagonNumber5 } from 'react-icons/tb';
+import { motion } from 'framer-motion';
 
-export const Section = styled.section`
+export const Section = styled(motion.section)`
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: ${p => p.theme.colors.backgroundMain};
@@ -21,11 +22,11 @@ export const Title = styled.h2`
     font-size: 36px;
   }
 `;
-export const List = styled.ul`
+export const List = styled(motion.ul)`
   display: flex;
   flex-wrap: wrap;
 `;
-export const ListItem = styled.li`
+export const ListItem = styled(motion.li)`
   display: flex;
   @media screen and (max-width: 767px) {
     &:not(:last-child) {

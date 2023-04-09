@@ -27,6 +27,7 @@ import {
   SectionStudy,
   TitleStudy,
   TextStudy,
+  ButtonLink,
 } from './WorkersInfoDetails-styled';
 
 const TextAnimationUp = {
@@ -108,6 +109,7 @@ const ProductDetails = ({ id }) => {
             >
               <WrapperTitle variants={TextAnimationLeft}>
                 <Title>{worker[0].fullName}</Title>
+                <ButtonLink to="/mentors">Назад</ButtonLink>
               </WrapperTitle>
               <WrapperText variants={TextAnimationRight}>
                 <TitleEducation>Освіта:</TitleEducation>

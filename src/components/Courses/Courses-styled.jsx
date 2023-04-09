@@ -25,7 +25,7 @@ export const SectionTwo = styled.section`
   padding-bottom: 160px;
   background-color: ${p => p.theme.colors.backgroundThird};
 `;
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
   font-size: 30px;
   color: #000000;
   margin-bottom: 29px;
@@ -42,11 +42,11 @@ export const WrapperList = styled.div`
     margin-bottom: 715px;
   }
 `;
-export const CoursesList = styled.ul`
+export const CoursesList = styled(motion.ul)`
   display: flex;
   flex-wrap: wrap;
 `;
-export const CoursesItem = styled.li`
+export const CoursesItem = styled(motion.li)`
   @media screen and (min-width: 320px) and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 15px;
@@ -70,7 +70,7 @@ export const CoursesItem = styled.li`
     }
   }
 `;
-export const ButtonFilter = styled.button`
+export const ButtonFilter = styled(motion.button)`
   width: 180px;
   height: 90px;
   color: white;
@@ -144,7 +144,7 @@ export const WrapperMainInfo = styled(motion.div)`
     width: 100%;
   }
 `;
-export const WrapperInfo = styled.div`
+export const WrapperInfo = styled(motion.div)`
   border-radius: 10px;
   position: relative;
   padding: 15px;
@@ -153,7 +153,7 @@ export const WrapperInfo = styled.div`
     width: 100%;
   }
 `;
-export const WrapperInfoImg = styled.div`
+export const WrapperInfoImg = styled(motion.div)`
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -165,7 +165,7 @@ export const WrapperInfoImg = styled.div`
     width: 100%;
   }
 `;
-export const TextInfo = styled.p`
+export const TextInfo = styled(motion.p)`
   color: rgb(224, 145, 50);
   font-size: 17px;
   @media screen and (min-width: 768px) {
@@ -174,7 +174,7 @@ export const TextInfo = styled.p`
   }
 `;
 
-export const NameCourse = styled.h3`
+export const NameCourse = styled(motion.h3)`
   text-align: center;
   font-size: 25px;
   letter-spacing: 1.5px;
@@ -196,7 +196,7 @@ export const NameCourse = styled.h3`
 export const WrapperCourseInfoList = styled.div``;
 export const CourseInfoList = styled.ul``;
 export const CourseInfoItem = styled.li``;
-export const PriceWrapper = styled.div`
+export const PriceWrapper = styled(motion.div)`
   position: absolute;
   padding: 8px;
   top: 10px;
@@ -242,17 +242,17 @@ export const TilteOfField = styled.h4`
   letter-spacing: 1.5px;
 `;
 
-export const WrapperField = styled.div`
+export const WrapperField = styled(motion.div)`
   display: flex;
   align-items: baseline;
 `;
 
-export const FeaturesList = styled.ul`
+export const FeaturesList = styled(motion.ul)`
   @media screen and (min-width: 320px) and (max-width: 767px) {
     margin-bottom: 40px;
   }
 `;
-export const FeaturesListItem = styled.li`
+export const FeaturesListItem = styled(motion.li)`
   @media screen and (min-width: 1280px) {
     &:not(:last-child) {
       margin-bottom: 10px;

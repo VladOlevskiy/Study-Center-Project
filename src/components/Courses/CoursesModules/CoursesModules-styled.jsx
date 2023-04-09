@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { ImCheckmark2 } from 'react-icons/im';
+import { motion } from 'framer-motion';
 
-export const Section = styled.section`
+export const Section = styled(motion.section)`
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: ${p => p.theme.colors.backgroundThird};
@@ -16,7 +17,7 @@ export const Title = styled.h2`
   }
 `;
 export const ModulesList = styled.ul``;
-export const ModulesListItem = styled.li`
+export const ModulesListItem = styled(motion.li)`
   display: flex;
   align-items: center;
   &:not(:last-child) {

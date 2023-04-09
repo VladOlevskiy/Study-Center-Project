@@ -6,6 +6,10 @@ import {
   PhotoContainer,
 } from './CoursesMedia-styled';
 import { Container } from 'styles/Container-styled';
+import {
+  TextAnimationUp,
+  TextAnimationLeft,
+} from '../../../animations/animation.jsx';
 
 import { picture, a1, a2, a3, a4, a5, a6 } from 'media';
 
@@ -22,16 +26,21 @@ SwiperCore.use([Pagination, Navigation, EffectCoverflow]);
 
 const CoursesMedia = () => {
   return (
-    <Section>
+    <Section
+      initial={'offscreen'}
+      whileInView={'onscreen'}
+      viewport={{ once: false, amount: 0.4 }}
+      transition={{ staggerChildren: 0.6, duration: 1 }}
+    >
       <Container>
         <Title>Як проходить навчання?</Title>
-        <Text>
+        <Text variants={TextAnimationUp}>
           Зручний та сучасний простір у якому є все необхідне для навчання
           теорії і практичного відпрацювання. Для нас важливо, щоб після
           пройденого матеріалу та практики Ви не боялися приступати до роботи,
           тому особливий акцент робимо на відпрацюванні та 'постановці' руки.
         </Text>
-        <PhotoContainer>
+        <PhotoContainer variants={TextAnimationLeft}>
           <Swiper
             navigation
             scrollbar={{ draggable: true }}

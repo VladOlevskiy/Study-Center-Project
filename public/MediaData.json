@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "category": "Процедури",
+    "photos": ["/media/diplomas/photo_one.jpg"]
+  },
+  {
+    "id": 2,
+    "category": "Наші клієнти",
+    "photos": ["/media/diplomas/photo_one.jpg"]
+  },
+  {
+    "id": 3,
+    "category": "Навчання",
+    "photos": ["/media/diplomas/photo_one.jpg"]
+  }
+]

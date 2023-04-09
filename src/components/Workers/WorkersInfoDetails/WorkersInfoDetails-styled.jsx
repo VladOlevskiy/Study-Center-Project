@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { workers_img } from 'media';
 import { ImCheckmark2 } from 'react-icons/im';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export const Section = styled.section`
   padding-top: 120px;
@@ -29,7 +30,7 @@ export const WrapperMain = styled(motion.div)`
     align-items: center;
   }
   @media screen and (min-width: 1280px) {
-    margin-top: 310px;
+    margin-top: 275px;
   }
 `;
 export const WrapperTitle = styled(motion.div)`
@@ -90,7 +91,7 @@ export const TextEducation = styled(motion.p)`
 `;
 
 export const TextExperience = styled(motion.p)`
-  fon-size: 24px;
+  font-size: 24px;
   text-transform: uppercase;
   color: ${p => p.theme.colors.white};
   font-weight: 800;
@@ -209,5 +210,28 @@ export const TitleStudy = styled(motion.h2)`
 export const TextStudy = styled(motion.p)`
   @media screen and (min-width: 768px) {
     font-size: 20px;
+  }
+`;
+
+export const ButtonLink = styled(Link)`
+  font-size: 19px;
+  display: flex;
+  margin-top: 10px;
+  width: 145px;
+  height: 50px;
+  padding: 12px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${p => p.theme.colors.backgroundSecond};
+  transition: background-color 300ms, scale 300ms;
+  &:hover,
+  &:focus {
+    background-color: ${p => p.theme.colors.backgroundMain};
+    scale: 1.15;
+  }
+  @media screen and (min-width: 320px) and (max-width: 1279px) {
+    height: 40px;
+    font-size: 17px;
   }
 `;

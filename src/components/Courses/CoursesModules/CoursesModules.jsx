@@ -7,16 +7,23 @@ import {
   IconModulesListItem,
 } from './CoursesModules-styled';
 import { Container } from 'styles/Container-styled';
+import { TextAnimationLeft } from '../../../animations/animation.jsx';
 
 const CoursesModules = ({ course }) => {
   console.log(course.blocks.includes);
   return (
-    <Section>
+    <Section
+      initial={'offscreen'}
+      whileInView={'onscreen'}
+      exit={{ opacity: 0 }}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{ staggerChildren: 0.1, duration: 0.5 }}
+    >
       <Container>
         <Title>{course.blocks.title}</Title>
         <ModulesList>
           {course.blocks.includes.map(item => (
-            <ModulesListItem>
+            <ModulesListItem variants={TextAnimationLeft}>
               <IconModulesListItem />
               <TextModuleItem>{item}</TextModuleItem>
             </ModulesListItem>

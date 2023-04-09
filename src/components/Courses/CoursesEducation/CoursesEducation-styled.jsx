@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { education } from 'media';
+import { motion } from 'framer-motion';
 
-export const Section = styled.section`
+export const Section = styled(motion.section)`
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: ${p => p.theme.colors.backgroundSecond};
@@ -30,7 +31,7 @@ export const Title = styled.h2`
     font-size: 36px;
   }
 `;
-export const WrapperText = styled.div`
+export const WrapperText = styled(motion.div)`
   display: flex;
   align-items: center;
   background-color: rgb(66, 69, 48);

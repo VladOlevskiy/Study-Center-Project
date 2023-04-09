@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import picture from '../../media/pictureCourse.jpg';
+import { motion } from 'framer-motion';
 
 import CoursesEducation from './CoursesEducation/CoursesEducation';
 import CoursesMedia from './CoursesMedia/CoursesMedia';
@@ -33,6 +34,60 @@ import { useState } from 'react';
 import axios from 'axios';
 import { ThreeDots } from 'react-loader-spinner';
 import { AnimatePresence } from 'framer-motion';
+const TextAnimationDawn = {
+  offscreen: {
+    y: 300,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { type: 'spring' },
+    bounce: 0.01,
+    duration: 1,
+  },
+};
+const TextAnimationUp = {
+  offscreen: {
+    y: -300,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: { type: 'spring' },
+    bounce: 0.2,
+    duration: 3,
+  },
+};
+
+const TextAnimationLeft = {
+  offscreen: {
+    x: 300,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { type: 'spring' },
+    bounce: 0.2,
+    duration: 3,
+  },
+};
+
+const TextAnimationRight = {
+  offscreen: {
+    x: -1500,
+    opacity: 0,
+  },
+  onscreen: {
+    x: 0,
+    opacity: 1,
+    transition: { type: 'spring' },
+    bounce: 0.2,
+    duration: 3,
+  },
+};
 
 const Courses = () => {
   const [filter, setFilter] = useState(null);
@@ -88,16 +143,27 @@ const Courses = () => {
   };
 
   return (
-    <>
+    <motion.div
+      initial={'offscreen'}
+      whileInView={'onscreen'}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ staggerChildren: 0.6, duration: 0.7 }}
+    >
       <SectionOne>
         <Container>
-          <Title>Перелік наявних навчальних курсів</Title>
+          <Title variants={TextAnimationUp}>
+            Перелік наявних навчальних курсів
+          </Title>
           <Wrapper>
             <WrapperList>
-              <CoursesList>
+              <CoursesList
+                initial={'offscreen'}
+                animate={'onscreen'}
+                transition={{ staggerChildren: 1, duration: 0.3 }}
+              >
                 {allCourses &&
                   allCourses.map(course => (
-                    <CoursesItem>
+                    <CoursesItem variants={TextAnimationDawn}>
                       <ButtonFilter
                         type="button"
                         style={{
@@ -134,40 +200,56 @@ const Courses = () => {
                 {!loading && filterList && (
                   <>
                     <WrapperMainInfo
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
+                      initial={{ opacity: 0, scale: 0.005 }}
+                      animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0 }}
-                      transition={{ duration: 0.4 }}
+                      transition={{ duration: 0.5 }}
                     >
-                      <WrapperInfo>
+                      <WrapperInfo
+                        initial={'offscreen'}
+                        whileInView={'onscreen'}
+                        viewport={{ once: true, amount: 0.1 }}
+                        transition={{ staggerChildren: 0.2, duration: 0.3 }}
+                      >
                         <NameCourse>{filterList.name}</NameCourse>
-                        <PriceWrapper>
+                        <PriceWrapper variants={TextAnimationDawn}>
                           <PriceField>&#8372; {filterList.price}</PriceField>
                         </PriceWrapper>
                         <WrapperField>
-                          <TilteOfField>Тривалість курсу - </TilteOfField>
-                          <TextInfo>{filterList.duration}.</TextInfo>
+                          <TilteOfField>Тривалість курсу -</TilteOfField>
+                          <TextInfo variants={TextAnimationLeft}>
+                            {filterList.duration}.
+                          </TextInfo>
                         </WrapperField>
                         <WrapperField>
-                          <TilteOfField>Тип курсу - </TilteOfField>
-                          <TextInfo> {filterList.type}.</TextInfo>
+                          <TilteOfField>Тип курсу -</TilteOfField>
+                          <TextInfo variants={TextAnimationLeft}>
+                            {filterList.type}.
+                          </TextInfo>
                         </WrapperField>
                         <TilteOfField>Переваги курсу:</TilteOfField>
                         <FeaturesList>
                           {filterList.features.map(feature => (
-                            <>
-                              <FeaturesListItem>
-                                <TextInfo>
-                                  <IconItemList1 />
-                                  {feature}.
-                                </TextInfo>
-                              </FeaturesListItem>
-                            </>
+                            <FeaturesListItem variants={TextAnimationLeft}>
+                              <TextInfo>
+                                <IconItemList1 />
+                                {feature}.
+                              </TextInfo>
+                            </FeaturesListItem>
                           ))}
                         </FeaturesList>
                       </WrapperInfo>
-                      <WrapperInfoImg>
-                        <img
+                      <WrapperInfoImg
+                        initial={{
+                          x: -200,
+                          opacity: 0,
+                          scale: 1.7,
+                        }}
+                        animate={{ x: 0, opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.7 }}
+                      >
+                        <motion.img
                           src={`${picture}`}
                           height="100%"
                           alt=""
@@ -186,7 +268,7 @@ const Courses = () => {
       {filterList && <CoursesEducation course={filterList} />}
       <CoursesWhyUs />
       <CoursesMedia />
-    </>
+    </motion.div>
   );
 };
 

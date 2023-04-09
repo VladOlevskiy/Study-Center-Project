@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { SwiperSlide } from 'swiper/react';
+import { motion } from 'framer-motion';
 
 export const WrapperSwiperSlide = styled(SwiperSlide)`
   display: flex;
@@ -8,7 +9,7 @@ export const WrapperSwiperSlide = styled(SwiperSlide)`
   align-items: center;
 `;
 
-export const Section = styled.section`
+export const Section = styled(motion.section)`
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: ${p => p.theme.colors.backgroundThird};
@@ -23,7 +24,7 @@ export const Title = styled.h2`
   }
 `;
 
-export const Text = styled.p`
+export const Text = styled(motion.p)`
   font-size: 17px;
   text-align: center;
   margin-left: auto;
@@ -53,7 +54,7 @@ export const Img = styled.img`
     linear-gradient(transparent, transparent, #0006);
 `;
 
-export const PhotoContainer = styled.div`
+export const PhotoContainer = styled(motion.div)`
   height: 600px;
   width: 100%;
   display: flex;

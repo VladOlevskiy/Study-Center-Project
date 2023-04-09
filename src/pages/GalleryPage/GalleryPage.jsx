@@ -1,7 +1,9 @@
+import GalleryNavList from '../../components/Gallery/GalleryNavList/GalleryNavList';
+
 const GalleryPage = () => {
   return (
     <>
-      <h2>GalleryPage</h2>
+      <GalleryNavList />
     </>
   );
 };
