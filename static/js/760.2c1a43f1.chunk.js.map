@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/760.2c1a43f1.chunk.js","mappings":"0JAQA,UARoB,WAClB,OACE,+BACE,yCAGL,C","sources":["pages/GalleryPage/GalleryPage.jsx"],"sourcesContent":["const GalleryPage = () => {\n  return (\n    <>\n      <h2>GalleryPage</h2>\n    </>\n  );\n};\n\nexport default GalleryPage;\n"],"names":[],"sourceRoot":""}
