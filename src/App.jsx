@@ -13,6 +13,9 @@ const AboutPage = lazy(() => import('./pages/AboutPage/AboutPage'));
 const WorkerDetailsPage = lazy(() =>
   import('./pages/WorkerDetailsPage/WorkerDetailsPage')
 );
+const GalleryDetailPage = lazy(() =>
+  import('./pages/GalleryDetailPage/GalleryDetailPage')
+);
 export const App = () => {
   return (
     <HelmetProvider>
@@ -23,6 +26,7 @@ export const App = () => {
           <Route path="/mentors" element={<MentorsPage />} />
           <Route path="/mentors/:workerId" element={<WorkerDetailsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/gallery/:categoryId" element={<GalleryDetailPage />} />
           <Route path="/contacts" element={<ContactsPage />} />
           <Route path="/about" element={<AboutPage />} />
         </Route>

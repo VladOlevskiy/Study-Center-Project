@@ -1,17 +1,43 @@
 [
   {
     "id": 1,
-    "category": "Процедури",
-    "photos": ["/media/diplomas/photo_one.jpg"]
+    "name": "Процедури",
+    "avatar": "/media/procedures/procedures_1.jpg",
+    "photos": [
+      "/media/procedures/procedures_1.jpg",
+      "/media/procedures/procedures_2.jpg",
+      "/media/procedures/procedures_3.jpg",
+      "/media/procedures/procedures_4.jpg",
+      "/media/procedures/procedures_5.jpg",
+      "/media/procedures/procedures_6.jpg",
+      "/media/procedures/procedures_7.jpg"
+    ]
   },
   {
     "id": 2,
-    "category": "Наші клієнти",
-    "photos": ["/media/diplomas/photo_one.jpg"]
+    "name": "Косметологічні препарати",
+    "avatar": "/media/сosmetics/cosmetic_1.jpg",
+    "photos": [
+      "/media/сosmetics/cosmetic_1.jpg",
+      "/media/сosmetics/cosmetic_2.jpg",
+      "/media/сosmetics/cosmetic_3.jpg",
+      "/media/сosmetics/cosmetic_4.jpg",
+      "/media/сosmetics/cosmetic_5.jpg",
+      "/media/сosmetics/cosmetic_6.jpg",
+      "/media/сosmetics/cosmetic_7.jpg"
+    ]
   },
   {
     "id": 3,
-    "category": "Навчання",
-    "photos": ["/media/diplomas/photo_one.jpg"]
+    "name": "Навчання",
+    "avatar": "/media/study/study_1.jpg",
+    "photos": [
+      "/media/study/study_1.jpg",
+      "/media/study/study_2.jpg",
+      "/media/study/study_3.jpg",
+      "/media/study/study_4.jpg",
+      "/media/study/study_5.jpg",
+      "/media/study/study_6.jpg"
+    ]
   }
 ]
