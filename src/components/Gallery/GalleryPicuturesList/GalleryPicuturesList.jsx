@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
 import FsLightbox from 'fslightbox-react';
-import { motion } from 'framer-motion';
 import {
   Section,
   List,
