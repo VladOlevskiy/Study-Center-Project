@@ -3,6 +3,7 @@ import GalleryNavList from '../../components/Gallery/GalleryNavList/GalleryNavLi
 const GalleryPage = () => {
   return (
     <>
+      <h2>GalleryNavList</h2>
       <GalleryNavList />
     </>
   );
