@@ -30,15 +30,33 @@ const TextAnimationContactFormSection = {
   }),
 };
 
-const ContactFormSection = () => {
+const ContactFormSection = ({
+  color = '#424530',
+  titleColor = 'white',
+  containerOff = 'false',
+}) => {
   return (
-    <Section initial="hidden" whileInView="visible" viewport={{ amount: 0.2 }}>
-      <Container>
+    <Section
+      style={{ background: color }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2 }}
+    >
+      <Container
+        style={{
+          paddingLeft: containerOff && '0px',
+          paddingRight: containerOff && '0px',
+        }}
+      >
         <MainWrapper>
           <ImgWrapper custom={1} variants={TextAnimationContactFormSection} />
           <ContactWrapper>
-            <Title custom={2} variants={TextAnimationContactFormSection}>
-              Any place in your app!
+            <Title
+              style={{ color: titleColor }}
+              custom={2}
+              variants={TextAnimationContactFormSection}
+            >
+              Якщо у вас є питання надішліть запит, і ми з вами зв'яжемося
             </Title>
             <Formik initialValues={{ email: '', password: '' }}>
               <Form>

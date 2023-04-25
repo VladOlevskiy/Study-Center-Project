@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-export const Section = styled.section`
+export const Section = styled(motion.section)`
   padding-top: 120px;
   padding-bottom: 350px;
   background: #8e9eab; /* fallback for old browsers */
@@ -29,7 +31,7 @@ export const List = styled.ul`
     margin-right: auto;
   }
 `;
-export const Item = styled.li`
+export const Item = styled(motion.li)`
   width: auto;
   border-radius: 2px;
   transition: scale 350ms ease-in-out;
@@ -56,5 +58,29 @@ export const Img = styled.img`
   }
   @media screen and (min-width: 768px) {
     max-height: 550px;
+  }
+`;
+
+export const ButtonLink = styled(Link)`
+  font-size: 19px;
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 145px;
+  height: 50px;
+  padding: 12px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: ${p => p.theme.colors.backgroundSecond};
+  transition: background-color 300ms, scale 300ms;
+  &:hover,
+  &:focus {
+    background-color: ${p => p.theme.colors.backgroundMain};
+    scale: 1.15;
+  }
+  @media screen and (min-width: 320px) and (max-width: 1279px) {
+    height: 40px;
+    font-size: 17px;
   }
 `;

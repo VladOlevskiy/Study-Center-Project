@@ -64,7 +64,7 @@ export const LogoContainer = styled.div``;
 export const MenuContainer = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 `;
 
 export const MenuButtonContainer = styled.div`
@@ -113,7 +113,6 @@ export const NavbarLink = styled(NavLink)`
     &:hover::after {
       top: 40px;
     } */
-  }
 `;
 
 export const NavbarLinkExtended = styled(NavLink)`

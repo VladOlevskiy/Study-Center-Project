@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import SharedLayout from './components/SharedLayout/SharedLayout';
-
 import { lazy } from 'react';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
@@ -16,6 +15,7 @@ const WorkerDetailsPage = lazy(() =>
 const GalleryDetailPage = lazy(() =>
   import('./pages/GalleryDetailPage/GalleryDetailPage')
 );
+
 export const App = () => {
   return (
     <HelmetProvider>

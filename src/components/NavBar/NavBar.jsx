@@ -19,6 +19,7 @@ import {
   Header,
   ActiveLineEl,
 } from './NavBar-styled';
+import { evaLogo } from 'media';
 
 const NavBar = () => {
   const [extendNavbar, setExtendNavbar] = useState(false);
@@ -31,7 +32,9 @@ const NavBar = () => {
         <Container>
           <MenuContainer>
             <LogoContainer>
-              <Logo to="/">LOGO</Logo>
+              <Logo to="/">
+                <img src={evaLogo} height={'30px'} alt="logo" />
+              </Logo>
             </LogoContainer>
             <MenuButtonContainer>
               <OpenLinksButton

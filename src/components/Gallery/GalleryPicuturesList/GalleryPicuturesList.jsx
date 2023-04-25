@@ -9,7 +9,9 @@ import {
   Item,
   WrapperImg,
   Img,
+  ButtonLink,
 } from './GalleryPicuturesList-styled';
+import { TextAnimationOpacityDelay } from '../../../animations/animation';
 
 const GalleryPicuturesList = ({ id }) => {
   const [media, setMedia] = useState(null);
@@ -44,17 +46,23 @@ const GalleryPicuturesList = ({ id }) => {
       slide: number,
     });
   };
-  let aa = [];
+  let mediaArray = [];
+
   return (
-    <Section>
+    <Section initial="hidden" animate="visible">
       <Container>
-        <h2>GalleryPicuturesList</h2>
+        <ButtonLink to="/gallery">Назад</ButtonLink>
         <List>
           {media &&
             media[0].photos.map((photo, index) => {
-              aa.push(process.env.PUBLIC_URL + `${photo}`);
+              mediaArray.push(process.env.PUBLIC_URL + `${photo}`);
               return (
-                <Item onClick={() => openLightboxOnSlide(index + 1)}>
+                <Item
+                  custom={index}
+                  variants={TextAnimationOpacityDelay}
+                  id={index}
+                  onClick={() => openLightboxOnSlide(index + 1)}
+                >
                   <WrapperImg>
                     <Img
                       src={process.env.PUBLIC_URL + `${photo}`}
@@ -68,7 +76,7 @@ const GalleryPicuturesList = ({ id }) => {
         {media && (
           <FsLightbox
             toggler={lightboxController.toggler}
-            sources={aa}
+            sources={mediaArray}
             slide={lightboxController.slide}
           />
         )}

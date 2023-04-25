@@ -16,3 +16,8 @@ export { default as a6 } from './66.jpg';
 export { default as workers_img } from './workers-img.jpg';
 export { default as photo_Malesh } from './photo-Malesh.jpg';
 export { default as photo_Grinchuk } from './photo-Grinchuk.jpg';
+export { default as aab } from './aa.jpg';
+export { default as aab1 } from './aa1.jpg';
+export { default as video } from './video.mp4';
+export { default as png } from './png.png';
+export { default as evaLogo } from './eva-logo.png';

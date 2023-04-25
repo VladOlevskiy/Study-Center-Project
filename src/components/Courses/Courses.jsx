@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import picture from '../../media/pictureCourse.jpg';
 import { motion } from 'framer-motion';
+// import { useNavigate } from 'react-router-dom';
 
 import CoursesEducation from './CoursesEducation/CoursesEducation';
 import CoursesMedia from './CoursesMedia/CoursesMedia';
@@ -75,34 +76,17 @@ const TextAnimationLeft = {
   },
 };
 
-// const TextAnimationRight = {
-//   offscreen: {
-//     x: -1500,
-//     opacity: 0,
-//   },
-//   onscreen: {
-//     x: 0,
-//     opacity: 1,
-//     transition: { type: 'spring' },
-//     bounce: 0.2,
-//     duration: 3,
-//   },
-// };
-
 const Courses = () => {
+  // const navigate = useNavigate();
   const [filter, setFilter] = useState(null);
   const [loading, setLoading] = useState(false);
   const [filterList, setFilterList] = useState(null);
   const [allCourses, setAllCourses] = useState(null);
-  // const courses = {
-  //   Course_1: 1,
-  //   Course_2: 2,
-  //   Course_3: 3,
-  //   Course_4: 4,
-  //   Course_5: 5,
-  //   Course_6: 6,
-  //   Course_7: 7,
+
+  // const handleSubmit = () => {
+  //   navigate('/programs/aa', { replace: true });
   // };
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -120,6 +104,7 @@ const Courses = () => {
     fetchData();
   }, []);
   console.log(filterList);
+
   const getCourses = async id => {
     try {
       setLoading(true);
@@ -163,7 +148,7 @@ const Courses = () => {
               >
                 {allCourses &&
                   allCourses.map(course => (
-                    <CoursesItem variants={TextAnimationDawn}>
+                    <CoursesItem>
                       <ButtonFilter
                         type="button"
                         style={{
@@ -198,7 +183,12 @@ const Courses = () => {
                   </div>
                 )}
                 {!loading && filterList && (
-                  <>
+                  <motion.div
+                    key="xx"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
                     <WrapperMainInfo
                       initial={{ opacity: 0, scale: 0.005 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -257,7 +247,7 @@ const Courses = () => {
                         />
                       </WrapperInfoImg>
                     </WrapperMainInfo>
-                  </>
+                  </motion.div>
                 )}
               </AnimatePresence>
             </WrapperContent>

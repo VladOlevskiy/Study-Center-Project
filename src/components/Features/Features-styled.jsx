@@ -15,19 +15,20 @@ export const Section = styled(motion.section)`
       rgba(66, 69, 48, 0.3)
     ),
     url(${aaa}); */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       rgba(165, 142, 116, 0.303),
       rgba(211, 195, 176, 0.203),
       rgba(179, 166, 151, 0.203),
       rgba(165, 142, 116, 0.303)
     ),
-    url(${img});
-  background-position: center;
+    url(${img}); */
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   overflow: hidden;
   padding-top: 70px;
   padding-bottom: 60px;
+  background: linear-gradient(to right, rgb(238, 242, 243), rgb(142, 158, 171));
 `;
 
 export const Title = styled(motion.h2)`

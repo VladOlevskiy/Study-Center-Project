@@ -6,8 +6,6 @@ import { Field, Form as FormFormik } from 'formik';
 export const Section = styled(motion.section)`
   padding-top: 100px;
   padding-bottom: 100px;
-
-  background-color: ${p => p.theme.colors.backgroundThird};
 `;
 
 export const Title = styled(motion.h2)`

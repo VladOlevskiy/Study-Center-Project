@@ -55,15 +55,11 @@ export const TextAnimationRight = {
 
 export const TextAnimationZoom = {
   offscreen: {
-    scale: 2,
     opacity: 0,
   },
   onscreen: {
-    scale: 1,
     opacity: 1,
-    transition: { type: 'spring' },
-    bounce: 0.2,
-    duration: 3,
+    transition: { duration: 0.8 },
   },
 };
 
@@ -73,8 +69,15 @@ export const TextAnimationOpacity = {
   },
   onscreen: {
     opacity: 1,
-    transition: { type: 'spring' },
-    bounce: 0.2,
-    duration: 3,
+    transition: { duration: 2 },
   },
+};
+export const TextAnimationOpacityDelay = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: custom => ({
+    opacity: 1,
+    transition: { delay: custom * 0.3, duration: 1 },
+  }),
 };

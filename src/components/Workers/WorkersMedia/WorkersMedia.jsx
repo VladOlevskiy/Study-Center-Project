@@ -58,6 +58,7 @@ const WorkersMedia = ({ data }) => {
               aa.push(process.env.PUBLIC_URL + `${photo}`);
               return (
                 <Item
+                  id={index}
                   variants={TextAnimationUp}
                   onClick={() => openLightboxOnSlide(index + 1)}
                 >

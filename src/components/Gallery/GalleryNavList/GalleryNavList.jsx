@@ -9,7 +9,10 @@ import {
   ItemLink,
   WrapperImg,
   Img,
+  WrapperText,
+  TextCategory,
 } from './GalleryNavList-styled';
+import { TextAnimationOpacity } from '../../../animations/animation';
 
 const GalleryNavList = () => {
   const [mediaData, setMediaData] = useState(null);
@@ -31,18 +34,19 @@ const GalleryNavList = () => {
   return (
     <Section>
       <Container>
-        <h2 style={{ color: 'black' }}>GalleryNavList</h2>
-        <List>
+        <List initial={'offscreen'} animate={'onscreen'}>
           {mediaData &&
             mediaData.map(category => (
-              <Item>
-                <h2>{category.name}</h2>
+              <Item variants={TextAnimationOpacity}>
                 <ItemLink to={`${category.id}`}>
                   <WrapperImg>
                     <Img
                       src={process.env.PUBLIC_URL + `${category.avatar}`}
                       alt="photo of worker"
                     />
+                    <WrapperText>
+                      <TextCategory>{category.name}</TextCategory>
+                    </WrapperText>
                   </WrapperImg>
                 </ItemLink>
               </Item>

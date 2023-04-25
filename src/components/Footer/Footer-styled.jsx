@@ -45,10 +45,11 @@ export const ItemWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: background-color 300ms;
+  transition: background-color 600ms, border 600ms;
 
   &:hover {
-    background-color: white;
+    background-color: #ffffff;
+    border: 1.5px solid ${p => p.theme.colors.backgroundThird};
   }
 `;
 

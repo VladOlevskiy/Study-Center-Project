@@ -1,7 +1,9 @@
+import Contacts from 'components/Contacts/Contacts';
+
 const ContactsPage = () => {
   return (
     <>
-      <h2>ContactsPage</h2>
+      <Contacts />
     </>
   );
 };
