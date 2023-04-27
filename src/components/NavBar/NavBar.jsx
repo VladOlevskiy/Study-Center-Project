@@ -54,31 +54,31 @@ const NavBar = () => {
               </ListNavItem>
               <ListNavItem>
                 <NavbarLink to="/programs">Навчальні програми</NavbarLink>
-                {location.pathname === '/programs' && (
+                {location.pathname.includes('/programs') && (
                   <ActiveLineEl layoutId="activeItem" />
                 )}
               </ListNavItem>
               <ListNavItem>
                 <NavbarLink to="/mentors">Персонал</NavbarLink>
-                {location.pathname === '/mentors' && (
+                {location.pathname.includes('/mentors') && (
                   <ActiveLineEl layoutId="activeItem" />
                 )}
               </ListNavItem>
               <ListNavItem>
                 <NavbarLink to="/gallery">Галерея</NavbarLink>
-                {location.pathname === '/gallery' && (
+                {location.pathname.includes('/gallery') && (
                   <ActiveLineEl layoutId="activeItem" />
                 )}
               </ListNavItem>
               <ListNavItem>
                 <NavbarLink to="/contacts">Контакти</NavbarLink>
-                {location.pathname === '/contacts' && (
+                {location.pathname.includes('/contacts') && (
                   <ActiveLineEl layoutId="activeItem" />
                 )}
               </ListNavItem>
               <ListNavItem>
                 <NavbarLink to="/about">Про нас</NavbarLink>
-                {location.pathname === '/about' && (
+                {location.pathname.includes('/about') && (
                   <ActiveLineEl layoutId="activeItem" />
                 )}
               </ListNavItem>
@@ -105,7 +105,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-// function ActiveLine() {
-//   return <ActiveLineEl layoutId="activeItem" />;
-// }

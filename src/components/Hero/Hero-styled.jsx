@@ -37,6 +37,9 @@ export const Section = styled(motion.section)`
   overflow: hidden;
   padding-top: 200px;
   padding-bottom: 200px;
+  height: 80vh;
+  display: flex;
+  align-items: center;
 `;
 
 export const Title = styled(motion.h1)`

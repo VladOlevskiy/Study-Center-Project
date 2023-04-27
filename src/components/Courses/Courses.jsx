@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import picture from '../../media/pictureCourse.jpg';
 import { motion } from 'framer-motion';
-// import { useNavigate } from 'react-router-dom';
 
 import CoursesEducation from './CoursesEducation/CoursesEducation';
 import CoursesMedia from './CoursesMedia/CoursesMedia';
@@ -77,15 +76,10 @@ const TextAnimationLeft = {
 };
 
 const Courses = () => {
-  // const navigate = useNavigate();
   const [filter, setFilter] = useState(null);
   const [loading, setLoading] = useState(false);
   const [filterList, setFilterList] = useState(null);
   const [allCourses, setAllCourses] = useState(null);
-
-  // const handleSubmit = () => {
-  //   navigate('/programs/aa', { replace: true });
-  // };
 
   useEffect(() => {
     async function fetchData() {
@@ -103,12 +97,10 @@ const Courses = () => {
     }
     fetchData();
   }, []);
-  console.log(filterList);
 
   const getCourses = async id => {
     try {
       setLoading(true);
-      console.log(loading);
       setFilter(id);
       const response = await axios.get('coursesData.json');
       const data = response.data;
@@ -117,7 +109,6 @@ const Courses = () => {
         return data.id === id;
       });
 
-      console.log(filteredData);
       setFilterList(...filteredData);
 
       setLoading(false);
@@ -148,7 +139,7 @@ const Courses = () => {
               >
                 {allCourses &&
                   allCourses.map(course => (
-                    <CoursesItem>
+                    <CoursesItem key={course.id}>
                       <ButtonFilter
                         type="button"
                         style={{
@@ -184,7 +175,6 @@ const Courses = () => {
                 )}
                 {!loading && filterList && (
                   <motion.div
-                    key="xx"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -219,8 +209,11 @@ const Courses = () => {
                         </WrapperField>
                         <TilteOfField>Переваги курсу:</TilteOfField>
                         <FeaturesList>
-                          {filterList.features.map(feature => (
-                            <FeaturesListItem variants={TextAnimationLeft}>
+                          {filterList.features.map((feature, index) => (
+                            <FeaturesListItem
+                              key={index}
+                              variants={TextAnimationLeft}
+                            >
                               <TextInfo>
                                 <IconItemList1 />
                                 {feature}.
@@ -240,10 +233,10 @@ const Courses = () => {
                         transition={{ duration: 0.7 }}
                       >
                         <motion.img
-                          src={`${picture}`}
-                          height="100%"
+                          src={process.env.PUBLIC_URL + `${filterList.picture}`}
+                          width="100%"
                           alt=""
-                          style={{ borderRadius: '10px' }}
+                          style={{ borderRadius: '10px', objectFit: 'cover' }}
                         />
                       </WrapperInfoImg>
                     </WrapperMainInfo>
@@ -263,14 +256,3 @@ const Courses = () => {
 };
 
 export default Courses;
-
-// Чому варто обрати нас ?
-// - Унікальний метеріал. Лише авторські курси від топових фахівців. Ми зібрали найбільш цікавий матеріал;
-// - Актуалність. Хоч ми і маємо великий практичний досвід та подаємо виключно сучасні та передові методики;
-// - Швидка імплементація. На наступний день після закінчення навчання Ви застосуєте свої знання на практиці;
-// - Престиж. Це одна з професій яка завжди має достатньо попиту, постійно розвивається і не стоїть на місці;
-// - Індивідуальний підхів. Навчання в невеликих групах до 5 чоловік.
-
-// Як проходить навчання?
-// Зручний та сучасний простір у якому є все необхідне для навчання теорії і практичного відпрацювання. Для нас важливо, щоб після пройденого матеріалу та практики Ви не боялися приступати до роботи, тому особливий акцент робимо на відпрацюванні та 'постановці' руки.
-// Слайдер з фотками

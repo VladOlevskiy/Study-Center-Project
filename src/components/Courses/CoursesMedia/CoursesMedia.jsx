@@ -5,13 +5,15 @@ import {
   Img,
   PhotoContainer,
 } from './CoursesMedia-styled';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import axios from 'axios';
+
 import { Container } from 'styles/Container-styled';
 import {
   TextAnimationUp,
   TextAnimationLeft,
 } from '../../../animations/animation.jsx';
-
-import { picture, a1, a2, a3, a4, a5, a6 } from 'media';
 
 // import Swiper styles
 import 'swiper/css';
@@ -25,6 +27,21 @@ import SwiperCore, { Pagination, Navigation, EffectCoverflow } from 'swiper';
 SwiperCore.use([Pagination, Navigation, EffectCoverflow]);
 
 const CoursesMedia = () => {
+  const [photos, setPhotos] = useState(null);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        // setLoading(true);
+        const response = await axios.get('mediaData.json');
+        const data = response.data[2].photos;
+        setPhotos(data);
+        // setLoading(false);
+      } catch (error) {
+        throw new Error(error);
+      }
+    }
+    fetchData();
+  }, []);
   return (
     <Section
       initial={'offscreen'}
@@ -45,8 +62,8 @@ const CoursesMedia = () => {
             navigation
             scrollbar={{ draggable: true }}
             effect="coverflow"
-            centered
-            auto
+            centered="true"
+            auto="true"
             grabCursor="true"
             centeredSlides="true"
             spaceBetween={0}
@@ -75,27 +92,15 @@ const CoursesMedia = () => {
               },
             }}
           >
-            <SwiperSlide>
-              <Img src={`${a1}`} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Img src={`${a2}`} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Img src={`${a3}`} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Img src={`${a4}`} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Img src={`${a5}`} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Img src={`${a6}`} alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <Img src={`${picture}`} alt="" />
-            </SwiperSlide>
+            {photos && (
+              <>
+                {photos.map((photo, index) => (
+                  <SwiperSlide key={index}>
+                    <Img src={process.env.PUBLIC_URL + `${photo}`} alt="" />
+                  </SwiperSlide>
+                ))}
+              </>
+            )}
           </Swiper>
         </PhotoContainer>
       </Container>

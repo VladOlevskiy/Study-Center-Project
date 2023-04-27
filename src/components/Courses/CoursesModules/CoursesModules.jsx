@@ -10,7 +10,6 @@ import { Container } from 'styles/Container-styled';
 import { TextAnimationLeft } from '../../../animations/animation.jsx';
 
 const CoursesModules = ({ course }) => {
-  console.log(course.blocks.includes);
   return (
     <Section
       initial={'offscreen'}
@@ -22,8 +21,8 @@ const CoursesModules = ({ course }) => {
       <Container>
         <Title>{course.blocks.title}</Title>
         <ModulesList>
-          {course.blocks.includes.map(item => (
-            <ModulesListItem variants={TextAnimationLeft}>
+          {course.blocks.includes.map((item, index) => (
+            <ModulesListItem key={index} variants={TextAnimationLeft}>
               <IconModulesListItem />
               <TextModuleItem>{item}</TextModuleItem>
             </ModulesListItem>

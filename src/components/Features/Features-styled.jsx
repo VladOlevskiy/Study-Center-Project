@@ -5,26 +5,8 @@ import { HiAcademicCap } from 'react-icons/hi';
 import { GiBlackBook } from 'react-icons/gi';
 import { AiFillSignal } from 'react-icons/ai';
 import { GiNotebook } from 'react-icons/gi';
-import { img } from 'media';
-import { aaa } from 'media';
 
 export const Section = styled(motion.section)`
-  /* background-color: ${p => p.theme.colors.backgroundMain}; */
-  /* background-image: linear-gradient(
-      rgba(47, 48, 58, 0.1),
-      rgba(66, 69, 48, 0.3)
-    ),
-    url(${aaa}); */
-  /* background-image: linear-gradient(
-      rgba(165, 142, 116, 0.303),
-      rgba(211, 195, 176, 0.203),
-      rgba(179, 166, 151, 0.203),
-      rgba(165, 142, 116, 0.303)
-    ),
-    url(${img}); */
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; */
   overflow: hidden;
   padding-top: 70px;
   padding-bottom: 60px;
@@ -86,14 +68,13 @@ export const LinkButton = styled(LinkRout)`
 `;
 
 export const MainWrapper = styled.div`
-  @media screen and (min-width: 767px) {
+  /* @media screen and (min-width: 767px) {
     display: flex;
     align-items: center;
-  }
+  } */
 `;
 
 export const TitleWrapper = styled(motion.div)`
-  /* From https://css.glass */
   padding: 18px;
   background: rgba(255, 255, 255, 0);
   border-radius: 16px;
@@ -103,26 +84,24 @@ export const TitleWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 60px;
   @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
   }
   @media screen and (min-width: 767px) and (max-width: 1279px) {
-    margin-right: 30px;
-    width: 40%;
+    /* margin-right: 30px; */
   }
   @media screen and (min-width: 1279px) {
-    margin-right: 30px;
-    width: 50%;
+    /* margin-right: 30px; */
   }
 `;
 
 export const FeaturesListWrapper = styled(motion.div)`
-  @media screen and (min-width: 767px) and (max-width: 1279px) {
+  /* @media screen and (min-width: 767px) and (max-width: 1279px) {
     width: 60%;
   }
   @media screen and (min-width: 1279px) {
     width: 50%;
-  }
+  } */
 `;
 
 export const FeatureList = styled.ul`
