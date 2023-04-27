@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import picture from '../../media/pictureCourse.jpg';
 import { motion } from 'framer-motion';
 
 import CoursesEducation from './CoursesEducation/CoursesEducation';
