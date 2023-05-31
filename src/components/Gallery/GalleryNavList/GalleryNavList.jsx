@@ -30,14 +30,13 @@ const GalleryNavList = () => {
     }
     fetchData();
   }, []);
-  console.log(mediaData);
   return (
     <Section>
       <Container>
         <List initial={'offscreen'} animate={'onscreen'}>
           {mediaData &&
-            mediaData.map(category => (
-              <Item variants={TextAnimationOpacity}>
+            mediaData.map((category, index) => (
+              <Item key={index} variants={TextAnimationOpacity}>
                 <ItemLink to={`${category.id}`}>
                   <WrapperImg>
                     <Img

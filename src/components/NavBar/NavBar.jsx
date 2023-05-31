@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Container } from '../../styles/Container-styled';
 import { useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import {
   LogoContainer,
@@ -24,6 +26,13 @@ import { evaLogo } from 'media';
 const NavBar = () => {
   const [extendNavbar, setExtendNavbar] = useState(false);
   const location = useLocation();
+  const blockScroll = () => {
+    if (!extendNavbar) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  };
 
   return (
     <div>
@@ -39,6 +48,7 @@ const NavBar = () => {
               <OpenLinksButton
                 onClick={() => {
                   setExtendNavbar(current => !current);
+                  blockScroll();
                 }}
               >
                 {extendNavbar ? <CloseMenuIcon /> : <OpenMenuIcon />}
@@ -83,20 +93,83 @@ const NavBar = () => {
               </ListNavItem>
             </ListNav>
           </MenuContainer>
-          {extendNavbar && (
-            <NavbarExtendedContainer>
-              <NavbarLinkExtendedContainer>
-                <NavbarLinkExtended to="/">Головна сторінка</NavbarLinkExtended>
-                <NavbarLinkExtended to="/programs">
-                  Навчальні програми
-                </NavbarLinkExtended>
-                <NavbarLinkExtended to="/mentors">Персонал</NavbarLinkExtended>
-                <NavbarLinkExtended to="/gallery">Галерея</NavbarLinkExtended>
-                <NavbarLinkExtended to="/contacts">Контакти</NavbarLinkExtended>
-                <NavbarLinkExtended to="/about">Про нас</NavbarLinkExtended>
-              </NavbarLinkExtendedContainer>
-            </NavbarExtendedContainer>
-          )}
+          <AnimatePresence>
+            {extendNavbar && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <NavbarExtendedContainer>
+                  <OpenLinksButton
+                    style={{ marginRight: 'auto', marginLeft: '0px' }}
+                    onClick={() => {
+                      setExtendNavbar(current => !current);
+                      blockScroll();
+                    }}
+                  >
+                    {extendNavbar ? <CloseMenuIcon /> : <OpenMenuIcon />}
+                  </OpenLinksButton>
+                  <NavbarLinkExtendedContainer>
+                    <NavbarLinkExtended
+                      onClick={() => {
+                        setExtendNavbar(false);
+                        blockScroll();
+                      }}
+                      to="/"
+                    >
+                      Головна сторінка
+                    </NavbarLinkExtended>
+                    <NavbarLinkExtended
+                      to="/programs"
+                      onClick={() => {
+                        setExtendNavbar(false);
+                        blockScroll();
+                      }}
+                    >
+                      Навчальні програми
+                    </NavbarLinkExtended>
+                    <NavbarLinkExtended
+                      to="/mentors"
+                      onClick={() => {
+                        setExtendNavbar(false);
+                        blockScroll();
+                      }}
+                    >
+                      Персонал
+                    </NavbarLinkExtended>
+                    <NavbarLinkExtended
+                      to="/gallery"
+                      onClick={() => {
+                        setExtendNavbar(false);
+                        blockScroll();
+                      }}
+                    >
+                      Галерея
+                    </NavbarLinkExtended>
+                    <NavbarLinkExtended
+                      to="/contacts"
+                      onClick={() => {
+                        setExtendNavbar(false);
+                        blockScroll();
+                      }}
+                    >
+                      Контакти
+                    </NavbarLinkExtended>
+                    <NavbarLinkExtended
+                      to="/about"
+                      onClick={() => {
+                        setExtendNavbar(false);
+                        blockScroll();
+                      }}
+                    >
+                      Про нас
+                    </NavbarLinkExtended>
+                  </NavbarLinkExtendedContainer>
+                </NavbarExtendedContainer>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Container>
       </Header>
     </div>

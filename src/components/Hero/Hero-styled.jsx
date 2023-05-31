@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link as LinkRout } from 'react-router-dom';
 import { heroBg_img } from 'media';
 import { motion } from 'framer-motion';
@@ -44,7 +44,20 @@ export const Section = styled(motion.section)`
     padding-top: 300px;
   }
 `;
-
+const animation = keyframes`
+	0%, 10% {
+		background-position: -1000px;
+	}
+	20% {
+		background-position: top left;
+	}
+	90% {
+		background-position: top right;
+	}
+	100% {
+		background-position: 1000px;
+	}
+`;
 export const Title = styled(motion.h1)`
   margin-bottom: 10px;
 
@@ -54,6 +67,31 @@ export const Title = styled(motion.h1)`
   text-align: center;
   @media screen and (min-width: 767px) {
     font-size: 48px;
+  }
+  @media screen and (min-width: 1280px) {
+    background: #222 -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#222),
+        to(#222),
+        color-stop(0.5, #fff)
+      ) 0 0 no-repeat;
+    background-image: -webkit-linear-gradient(
+      -40deg,
+      transparent 0%,
+      transparent 30%,
+      #ffffff 50%,
+      transparent 60%,
+      transparent 100%
+    );
+    color: rgba(255, 255, 255, 0.788);
+    text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+    -webkit-animation-name: ${animation};
+    -webkit-background-size: 200px;
+    -webkit-background-clip: text;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-iteration-count: infinite;
   }
 `;
 export const Text = styled(motion.p)`

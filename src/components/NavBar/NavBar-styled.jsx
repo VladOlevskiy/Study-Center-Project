@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 
 export const Header = styled.header`
   z-index: 100;
+  position: relative;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: -80px;
@@ -145,12 +146,18 @@ export const NavbarLinkExtended = styled(NavLink)`
 `;
 
 export const NavbarExtendedContainer = styled.div`
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 15px;
+  background: linear-gradient(to right, rgb(238, 242, 243), rgb(142, 158, 171));
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (min-width: 768px) {
     display: none;
+    width: 170px;
   }
 `;
 
