@@ -126,9 +126,7 @@ const Courses = () => {
     >
       <SectionOne>
         <Container>
-          <Title variants={TextAnimationUp}>
-            Перелік наявних навчальних курсів
-          </Title>
+          <Title>Перелік наявних навчальних курсів</Title>
           <Wrapper>
             <WrapperList>
               <CoursesList
