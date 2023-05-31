@@ -40,6 +40,9 @@ export const Section = styled(motion.section)`
   height: 80vh;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 1279px) {
+    padding-top: 300px;
+  }
 `;
 
 export const Title = styled(motion.h1)`

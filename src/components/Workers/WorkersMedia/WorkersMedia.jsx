@@ -49,6 +49,7 @@ const WorkersMedia = ({ data }) => {
       whileInView={'onscreen'}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ staggerChildren: 0.3 }}
+      style={{ overflow: 'hidden' }}
     >
       <Container>
         <Title variants={TextAnimationLeft}>Сертифікати:</Title>

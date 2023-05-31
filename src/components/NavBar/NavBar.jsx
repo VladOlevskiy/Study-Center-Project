@@ -24,7 +24,6 @@ import { evaLogo } from 'media';
 const NavBar = () => {
   const [extendNavbar, setExtendNavbar] = useState(false);
   const location = useLocation();
-  console.log(location);
 
   return (
     <div>

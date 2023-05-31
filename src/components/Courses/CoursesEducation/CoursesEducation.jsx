@@ -18,6 +18,7 @@ const CoursesEducation = ({ course }) => {
       exit={{ opacity: 0 }}
       viewport={{ once: true, amount: 0.6 }}
       transition={{ staggerChildren: 0.1, duration: 0.8 }}
+      style={{ overflow: 'hidden' }}
     >
       <Container>
         <Wrapper>

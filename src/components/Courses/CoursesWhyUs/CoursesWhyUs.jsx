@@ -21,6 +21,7 @@ const CoursesWhyUs = () => {
       exit={{ opacity: 0 }}
       viewport={{ once: true, amount: 0.6 }}
       transition={{ staggerChildren: 0.25, duration: 0.8 }}
+      style={{ overflow: 'hidden' }}
     >
       <Container>
         <Title>Чому варто обрати нас ?</Title>

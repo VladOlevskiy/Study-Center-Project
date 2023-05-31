@@ -48,6 +48,7 @@ const CoursesMedia = () => {
       whileInView={'onscreen'}
       viewport={{ once: false, amount: 0.4 }}
       transition={{ staggerChildren: 0.6, duration: 1 }}
+      style={{ overflow: 'hidden' }}
     >
       <Container>
         <Title>Як проходить навчання?</Title>

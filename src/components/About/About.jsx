@@ -1,4 +1,4 @@
-import { aab, aab1, video } from 'media';
+import { aab, aab1, video, poster } from 'media';
 import {
   Section,
   ParallaxEl,
@@ -33,6 +33,7 @@ const About = () => {
           autoPlay
           loop
           muted
+          poster={poster}
         ></Video>
       </WrapperVideo>
 

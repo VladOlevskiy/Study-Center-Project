@@ -63,6 +63,7 @@ const WorkersListMainInfo = ({ workers }) => {
       initial={'offscreen'}
       animate={'onscreen'}
       transition={{ staggerChildren: 0.1 }}
+      style={{ overflow: 'hidden' }}
     >
       <Container>
         <Title variants={TextAnimation}>Спеціалісти клініки Eva</Title>

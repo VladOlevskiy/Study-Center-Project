@@ -17,6 +17,7 @@ const CoursesModules = ({ course }) => {
       exit={{ opacity: 0 }}
       viewport={{ once: false, amount: 0.5 }}
       transition={{ staggerChildren: 0.1, duration: 0.5 }}
+      style={{ overflow: 'hidden' }}
     >
       <Container>
         <Title>{course.blocks.title}</Title>

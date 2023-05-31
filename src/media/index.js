@@ -9,3 +9,4 @@ export { default as aab1 } from './aa1.jpg';
 export { default as video } from './video.mp4';
 export { default as evaLogo } from './eva-logo.png';
 export { default as workers_img } from './workers-img.jpg';
+export { default as poster } from './bg-video.jpg';

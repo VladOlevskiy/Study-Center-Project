@@ -98,7 +98,7 @@ const ProductDetails = ({ id }) => {
   }, [id]);
   return (
     <>
-      <Section>
+      <Section style={{ overflow: 'hidden' }}>
         <Container>
           {worker && (
             <WrapperMain

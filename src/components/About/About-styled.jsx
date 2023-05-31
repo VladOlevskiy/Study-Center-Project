@@ -13,7 +13,6 @@ export const Section = styled(motion.section)`
     rgb(142, 158, 171)
   );
   padding-top: 80px;
-  padding-bottom: 50px;
   margin-right: auto;
   margin-left: auto;
 `;

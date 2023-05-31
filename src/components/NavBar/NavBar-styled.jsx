@@ -12,10 +12,15 @@ export const Header = styled.header`
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
+  @media screen and (max-width: 767px) {
+    margin-bottom: -79px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
   @media screen and (min-width: 1280px) {
     padding-top: 24px;
     padding-bottom: 24px;
-  } ;
+  }
 `;
 
 export const Logo = styled(Link)`
@@ -65,6 +70,9 @@ export const MenuContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 `;
 
 export const MenuButtonContainer = styled.div`
@@ -164,8 +172,8 @@ export const ActiveLineEl = styled(motion.div)`
   display: block;
   width: calc(100% - 10px);
   left: 5px;
-  top: 45px;
+  top: 46px;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    top: 37px;
+    top: 41px;
   }
 `;
